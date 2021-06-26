@@ -16,7 +16,7 @@ from utilities.data_structures.Config import Config
 config = Config()
 config.seed = 1
 config.environment = gym.make("MountainCarContinuous-v0")
-config.num_episodes_to_run = 100
+config.num_episodes_to_run = 1000
 config.file_to_save_data_results = None
 config.file_to_save_results_graph = "outcomes/Mountain_Car_Image.png"
 config.show_solution_score = False
