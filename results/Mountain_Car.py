@@ -1,3 +1,8 @@
+import os
+import sys
+from os.path import dirname, abspath
+sys.path.append(dirname(dirname(abspath(__file__))))
+
 import gym
 
 from agents.policy_gradient_agents.PPO import PPO
