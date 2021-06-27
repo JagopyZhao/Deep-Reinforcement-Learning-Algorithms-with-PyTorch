@@ -1,3 +1,7 @@
+import sys
+from os.path import dirname, abspath
+sys.path.append(dirname(dirname(abspath(__file__))))
+
 import gym
 from agents.policy_gradient_agents.PPO import PPO
 from agents.actor_critic_agents.DDPG import DDPG
@@ -12,13 +16,13 @@ config = Config()
 config.seed = 1
 config.environment = gym.make("Hopper-v2")
 config.num_episodes_to_run = 1000
-config.file_to_save_data_results = "data_and_graphs/Hopper_Results_Data.pkl"
-config.file_to_save_results_graph = "data_and_graphs/Hopper_Results_Graph.png"
+config.file_to_save_data_results = "Hopper_Results_Data.pkl"
+config.file_to_save_results_graph = "Hopper_Results_Graph.png"
 config.show_solution_score = False
 config.visualise_individual_results = False
 config.visualise_overall_agent_results = True
 config.standard_deviation_results = 1.0
-config.runs_per_agent = 3
+config.runs_per_agent = 1
 config.use_GPU = False
 config.overwrite_existing_results_file = False
 config.randomise_random_seed = True
